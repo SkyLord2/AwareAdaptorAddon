@@ -1,7 +1,7 @@
 #pragma once
 #include <Windows.h>
 #include <string>
-#include <node/node.h>
+#include <node.h>
 #include "ConnData.h"
 
 #pragma comment(lib, "fltLib.lib")

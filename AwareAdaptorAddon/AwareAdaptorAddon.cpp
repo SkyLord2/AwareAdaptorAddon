@@ -1,5 +1,5 @@
-﻿#include <node/node.h>
-#include <node/uv.h>
+﻿#include <node.h>
+#include <uv.h>
 #include <string>
 #include <cstring>
 #include <thread>
