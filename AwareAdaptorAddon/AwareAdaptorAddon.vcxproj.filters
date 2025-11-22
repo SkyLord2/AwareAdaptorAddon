@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="KernelCommunication">
+      <UniqueIdentifier>{ec1534ce-72c1-42bb-b46e-b3997c955f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServiceManage">
+      <UniqueIdentifier>{4c1c3349-7ce0-415b-abc4-fad9aa302e8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{3b7ce4b0-b117-4928-a8ac-3a5530f5822e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinifilterInstaller">
+      <UniqueIdentifier>{cad262ff-5743-4200-88d2-7c47a5d4df74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AwareAdaptorAddon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Communication.cpp">
+      <Filter>KernelCommunication</Filter>
+    </ClCompile>
+    <ClCompile Include="MinifilterInstaller.cpp">
+      <Filter>MinifilterInstaller</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceManage.cpp">
+      <Filter>ServiceManage</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Communication.h">
+      <Filter>KernelCommunication</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnData.h">
+      <Filter>KernelCommunication</Filter>
+    </ClInclude>
+    <ClInclude Include="MinifilterInstaller.h">
+      <Filter>MinifilterInstaller</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceManage.h">
+      <Filter>ServiceManage</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
