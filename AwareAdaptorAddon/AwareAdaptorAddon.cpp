@@ -5,6 +5,7 @@
 #include <thread>
 #include "MinifilterInstaller.h"
 #include "Communication.h"
+#include "Utils.h"
 
 MinifilterInstaller installer;
 std::wstring driverName = L"FileAware";
@@ -43,7 +44,16 @@ static void DriverInitialize(const v8::FunctionCallbackInfo<v8::Value>& args) {
 	// 获取回调函数
 	v8::Local<v8::Function> callback = v8::Local<v8::Function>::Cast(args[0]);
 
-	std::wstring infPath = L".\\FileAware.inf";
+	std::wstring modulePath;
+	BOOL res = GetModuleDirectory(modulePath);
+	if (!res) {
+        std::wcerr << L"GetModuleDirectory failed" << std::endl;
+		return;
+	}
+
+	std::wcout << L"module path: " << modulePath << std::endl;
+
+	std::wstring infPath = modulePath + L"\\FileAware.inf";
 
 	if (installer.InstallDriverEx(infPath, driverName)) {
 		std::wcout << L"driver install success" << std::endl;

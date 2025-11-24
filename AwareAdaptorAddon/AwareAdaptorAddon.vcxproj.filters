@@ -39,6 +39,9 @@
     <ClCompile Include="ServiceManage.cpp">
       <Filter>ServiceManage</Filter>
     </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Communication.h">
@@ -50,11 +53,11 @@
     <ClInclude Include="MinifilterInstaller.h">
       <Filter>MinifilterInstaller</Filter>
     </ClInclude>
-    <ClInclude Include="Utils.hpp">
-      <Filter>Utils</Filter>
-    </ClInclude>
     <ClInclude Include="ServiceManage.h">
       <Filter>ServiceManage</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

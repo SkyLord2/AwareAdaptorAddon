@@ -1,5 +1,6 @@
 // MinifilterInstaller.cpp
 #include "MinifilterInstaller.h"
+#include "Utils.h"
 #include <devguid.h>
 #include <strsafe.h>
 #include <codecvt>
@@ -201,8 +202,14 @@ BOOL MinifilterInstaller::InstallDriverByShell(const std::wstring& infPath, cons
 
 BOOL MinifilterInstaller::ManualCopyDriverFile(const std::wstring& driverName, const std::wstring& targetPath) {
 	// 默认同一个文件夹
-	std::wstring sourcePath = L".\\" + driverName + L".sys";
-
+	std::wstring modulePath;
+	BOOL res = GetModuleDirectory(modulePath);
+	if (!res)
+	{
+		return FALSE;
+	}
+	std::wstring sourcePath = modulePath + L"\\" + driverName + L".sys";
+	
 	// 检查源文件是否存在
 	if (GetFileAttributes(sourcePath.c_str()) == INVALID_FILE_ATTRIBUTES) {
 		std::wcerr << L"Source driver file not found: " << sourcePath << std::endl;
